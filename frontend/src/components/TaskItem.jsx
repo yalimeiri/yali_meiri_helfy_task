@@ -1,9 +1,8 @@
 export default function TaskItem({ task, onDelete, onToggle, onEdit }) {
-
   const priorityColors = {
-    High:   'red',
+    High: 'red',
     Medium: 'orange',
-    Low:    'green',
+    Low: 'green',
   };
 
   return (
@@ -18,7 +17,7 @@ export default function TaskItem({ task, onDelete, onToggle, onEdit }) {
           </h3>
           <span
             className="priority-badge"
-            style={{color: priorityColors[task.priority] }}
+            style={{ color: priorityColors[task.priority] }}
           >
             {task.priority}
           </span>
@@ -40,7 +39,7 @@ export default function TaskItem({ task, onDelete, onToggle, onEdit }) {
         </button>
 
         <button className="edit-btn" onClick={() => onEdit(task)}>
-           Edit
+          Edit
         </button>
 
         <button className="delete-btn" onClick={() => onDelete(task.id)}>
